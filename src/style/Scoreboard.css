@@ -1,0 +1,12 @@
+.gameScore {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.gameScore th {
+  font-weight: bold;
+}
+
+.gameScore td {
+  padding-left: 1rem;
+}
