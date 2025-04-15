@@ -1,42 +1,39 @@
 import '../style/MemoryGame.css';
-import Countries from './Countries';
 import Scoreboard from './Scoreboard';
 import Card from './Card';
 import { useState, useRef } from 'react';
 
-const [countries, flagUrl] = Countries();
-
-export default function MemoryGame() {
+export default function MemoryGame({ images }) {
   const [score, setScore] = useState(0);
   const [maxScore, setMaxScore] = useState(0);
   const selection = useRef({});
 
-  const handleClick = (code) => {
-    if (selection.current[code]) {
+  const shuffledImages = images.toSorted(() => Math.random() - 0.5);
+
+  const handleClick = (id) => {
+    if (selection.current[id]) {
       selection.current = {};
       return setScore(0);
     }
 
-    selection.current[code] = 1;
+    selection.current[id] = 1;
     setScore(score + 1);
     if (score >= maxScore) setMaxScore(score + 1);
   };
-
-  countries.sort(() => Math.random() - 0.5);
 
   return (
     <>
       <Scoreboard score={score} maxScore={maxScore} maxPossible={27} />
       <div className="cardContainer">
-        {countries.length < 1
-          ? 'Loading...'
-          : countries.map((country) => (
+        {shuffledImages.length < 1
+          ? 'Images are loading...'
+          : shuffledImages.map((img) => (
               <Card
-                key={`${country.code}`}
-                imageSrc={flagUrl(country.code)}
-                imageAlt={country.name}
-                text={country.name}
-                onClick={() => handleClick(country.code)}
+                key={img.id}
+                imageSrc={img.image}
+                imageAlt={img.text}
+                text={img.text}
+                onClick={() => handleClick(img.id)}
               />
             ))}
       </div>
