@@ -2,11 +2,9 @@ import '../style/Card.css';
 
 export default function Card({ imageSrc, imageAlt, text, onClick }) {
   return (
-    <div className="card">
-      <a href="#" onClick={onClick}>
-        <img className="cardImage" src={imageSrc} alt={imageAlt}></img>
-      </a>
+    <button className="card" onClick={onClick}>
+      <img className="cardImage" src={imageSrc} alt={imageAlt}></img>
       <span className="cardText">{text}</span>
-    </div>
+    </button>
   );
 }

@@ -1,29 +1,29 @@
 .card {
-  width: 192px;
-  padding: 0.5rem;
-  transition: all 0.4s ease;
+  color: inherit;
+  background: none;
+  padding: 0;
   overflow: hidden;
+  border: 3px solid #b7f8e21c;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
-.card:has(> a:hover),
-.card:has(> a:focus) {
-  transform: scale(1.1);
-  outline: 2px solid #b7f8e2;
-}
-
-.card > a {
-  width: 100%;
-  outline: none;
+.card:hover,
+.card:focus {
+  cursor: pointer;
+  border-color: #50f8c0;
 }
 
 .cardImage {
   width: 100%;
-  height: 108px;
+  height: 65%;
+  object-fit: cover;
 }
 
 .cardText {
   display: block;
-  padding-top: 0.4rem;
+  padding: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
