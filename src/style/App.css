@@ -15,3 +15,12 @@ header b {
   color: #19bdaf;
   font-weight: bold;
 }
+
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+footer > a {
+  color: inherit;
+}

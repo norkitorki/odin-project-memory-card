@@ -14,7 +14,13 @@ export default function App() {
           every country exactly <b>once</b> to win the game!
         </p>
       </header>
-      <MemoryGame images={countryFlags} />
+      <main>
+        <MemoryGame images={countryFlags} />
+      </main>
+      <footer>
+        Country flags were provided by{' '}
+        <a href="https://flagpedia.net/">Flagpedia.net</a>
+      </footer>
     </>
   );
 }
