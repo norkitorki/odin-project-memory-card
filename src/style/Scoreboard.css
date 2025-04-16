@@ -5,8 +5,5 @@
 
 .gameScore th {
   font-weight: bold;
-}
-
-.gameScore td {
-  padding-left: 1rem;
+  padding: 0 1rem 0.3rem 0;
 }
