@@ -11,7 +11,7 @@ export default function Scoreboard({ score, maxScore, maxPossible }) {
         <tr>
           <th>Max Score</th>
           <td>
-            {maxScore} {maxPossible && `(Max possible: ${maxPossible})`}
+            {maxScore} {maxPossible && `(${maxPossible})`}
           </td>
         </tr>
       </tbody>
