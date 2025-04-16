@@ -1,4 +1,17 @@
-h1 {
+header > * {
+  display: inline-block;
+  margin: 0 1.5rem 1.5rem 0;
+}
+
+header > h1 {
   font-size: 3rem;
-  padding-bottom: 1.5rem;
+}
+
+header > p {
+  font-size: 1.3rem;
+}
+
+header b {
+  color: #19bdaf;
+  font-weight: bold;
 }
