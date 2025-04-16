@@ -12,6 +12,7 @@
 .card:hover,
 .card:focus {
   cursor: pointer;
+  outline: none;
   border-color: #50f8c0;
 }
 
