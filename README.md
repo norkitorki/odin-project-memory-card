@@ -1,5 +1,5 @@
 # Odin Project: Memory Card
 
-A simple Memory Card game written in Javascript/React.
+A simple game where you can test your memory by memorizing every current EU member state. Written in Javascript/React.
 
 Country flags were provided by [Flagpedia](https://flagpedia.net/)

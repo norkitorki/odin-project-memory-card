@@ -8,7 +8,7 @@ export default function App() {
   return (
     <>
       <header>
-        <h1>EU Members Memory Card</h1>
+        <h1>EU Memory Card</h1>
         <p>
           Can you remember every member state of the European Union? Click on
           every country exactly <b>once</b> to win the game!
