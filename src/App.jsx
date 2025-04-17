@@ -19,7 +19,9 @@ export default function App() {
       </main>
       <footer>
         Country flags were provided by{' '}
-        <a href="https://flagpedia.net/">Flagpedia.net</a>
+        <a href="https://flagpedia.net/" target="_blank">
+          Flagpedia.net
+        </a>
       </footer>
     </>
   );
