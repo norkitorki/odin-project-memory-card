@@ -38,7 +38,7 @@ export default function MemoryGame({ images }) {
               <Card
                 key={img.id}
                 imageSrc={img.image}
-                imageAlt={img.text}
+                imageAlt={`${img.text} flag`}
                 text={img.text}
                 onClick={() => handleClick(img.id)}
               />
