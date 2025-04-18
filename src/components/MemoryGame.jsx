@@ -28,7 +28,8 @@ export default function MemoryGame({ images }) {
     if (score + 1 >= maxPossible) {
       alert('Congratulations! You have won the game.');
       setScore(0);
-      return setMaxScore(0);
+      setMaxScore(0);
+      return (selection.current = {});
     }
 
     selection.current[id] = 1;
