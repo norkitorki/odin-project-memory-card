@@ -34,15 +34,19 @@ export default function useFlags() {
   const [flags, setFlags] = useState([]);
 
   useEffect(() => {
-    const importFlags = () => {
+    (() => {
       Promise.all(
         countryData.map(async (country) => {
-          const flag = await import(`../assets/flags/${country.id}.svg`);
-          return { ...country, image: flag.default };
+          try {
+            const flag = await import(`../assets/flags/${country.id}.svg`);
+            return { ...country, image: flag.default };
+          } catch (error) {
+            console.error(error);
+            return { ...country, image: null };
+          }
         })
       ).then((res) => setFlags(res));
-    };
-    importFlags();
+    })();
   }, []);
 
   return flags;
