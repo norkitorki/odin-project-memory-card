@@ -3,13 +3,21 @@ import Scoreboard from './Scoreboard';
 import Card from './Card';
 import { useState, useRef } from 'react';
 
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 export default function MemoryGame({ images }) {
   const [score, setScore] = useState(0);
   const [maxScore, setMaxScore] = useState(0);
   const selection = useRef({});
 
   const maxPossible = images.length;
-  const shuffledImages = images.toSorted(() => Math.random() - 0.5);
+  const shuffledImages = shuffleArray([].concat(images));
 
   const handleClick = (id) => {
     if (selection.current[id]) {
