@@ -18,6 +18,15 @@ export default function MemoryGame({ images }) {
 
   const maxPossible = images.length;
   const shuffledImages = shuffleArray([].concat(images));
+  const imagesToRender = shuffledImages.slice(0, 9);
+
+  if (imagesToRender.every((img) => selection.current[img.id])) {
+    const image = shuffledImages.find((img) => !selection.current[img.id]);
+    if (image) {
+      const randomIndex = Math.floor(Math.random() * imagesToRender.length);
+      imagesToRender.splice(randomIndex, 1, image);
+    }
+  }
 
   const handleClick = (id) => {
     if (selection.current[id]) {
@@ -41,9 +50,9 @@ export default function MemoryGame({ images }) {
     <>
       <Scoreboard score={score} maxScore={maxScore} maxPossible={maxPossible} />
       <div className="cardContainer">
-        {shuffledImages.length < 1
+        {imagesToRender.length < 1
           ? 'Images are loading...'
-          : shuffledImages.map((img) => (
+          : imagesToRender.map((img) => (
               <Card
                 key={img.id}
                 imageSrc={img.image}

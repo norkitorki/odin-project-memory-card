@@ -1,11 +1,11 @@
 .card {
-  font-size: 1.2rem;
+  font-size: min(1.2rem, 3vw);
   font-weight: bold;
   color: inherit;
   background: none;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.5rem;
   padding: 0;
   border: 3px solid #b7f8e21c;
   border-radius: 4px;
@@ -21,6 +21,6 @@
 
 .cardImage {
   width: 100%;
-  height: 65%;
+  height: 70%;
   object-fit: cover;
 }

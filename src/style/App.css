@@ -8,7 +8,7 @@ header > h1 {
 }
 
 header > p {
-  font-size: 1.3rem;
+  font-size: min(5vw, 1.3rem);
 }
 
 header b {
