@@ -1,5 +1,5 @@
 .card {
-  font-size: min(1.2rem, 3vw);
+  font-size: min(1.2rem, 3vw, 2vh);
   font-weight: bold;
   color: inherit;
   background: none;

@@ -1,6 +1,8 @@
 .gameScore {
-  font-size: 1.2rem;
+  width: max-content;
+  font-size: min(5vw, 1.2rem);
   text-align: left;
+  margin: 0 auto;
 }
 
 .gameScore th {

@@ -4,7 +4,7 @@ header > * {
 }
 
 header > h1 {
-  font-size: 3rem;
+  font-size: min(10vw, 3rem);
 }
 
 header > p {
