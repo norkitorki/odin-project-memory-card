@@ -10,6 +10,7 @@
   border: 3px solid #b7f8e21c;
   border-radius: 4px;
   overflow: hidden;
+  transition: border 0.3s ease;
 }
 
 .card:hover,
