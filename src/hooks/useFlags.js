@@ -28,6 +28,7 @@ const countryData = [
   { id: 'si', text: 'Slovenia' },
   { id: 'es', text: 'Spain' },
   { id: 'se', text: 'Sweden' },
+  { id: 'no', text: 'Norway' },
 ];
 
 export default function useFlags() {
@@ -39,10 +40,11 @@ export default function useFlags() {
         countryData.map(async (country) => {
           try {
             const flag = await import(`../assets/flags/${country.id}.svg`);
-            return { ...country, image: flag.default };
+            const image = { src: flag.default, alt: `${country.text} flag` };
+            return { ...country, image };
           } catch (error) {
-            console.error(error);
-            return { ...country, image: null };
+            console.error(`${country.text} flag was not imported:`, error);
+            return { ...country, image: {} };
           }
         })
       ).then((res) => setFlags(res));

@@ -51,14 +51,13 @@ export default function MemoryGame({ images }) {
       <Scoreboard score={score} maxScore={maxScore} maxPossible={maxPossible} />
       <div className="cardContainer">
         {imagesToRender.length < 1
-          ? 'Images are loading...'
-          : imagesToRender.map((img) => (
+          ? 'Cards are loading...'
+          : imagesToRender.map((item) => (
               <Card
-                key={img.id}
-                imageSrc={img.image}
-                imageAlt={`${img.text} flag`}
-                text={img.text}
-                onClick={() => handleClick(img.id)}
+                key={item.id}
+                image={item.image}
+                text={item.text}
+                onClick={() => handleClick(item.id)}
               />
             ))}
       </div>
