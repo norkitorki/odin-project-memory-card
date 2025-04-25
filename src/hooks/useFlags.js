@@ -28,7 +28,6 @@ const countryData = [
   { id: 'si', text: 'Slovenia' },
   { id: 'es', text: 'Spain' },
   { id: 'se', text: 'Sweden' },
-  { id: 'no', text: 'Norway' },
 ];
 
 export default function useFlags() {
