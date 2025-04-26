@@ -1,6 +1,17 @@
+:root {
+  --bg-transparent: #060630bd;
+  --secondary-font: Arial;
+}
+
+@font-face {
+  font-family: Horizon;
+  src: url('../fonts/horizon-font.ttf');
+}
+
 body {
-  font-family: Helvetica, Verdana, Arial;
+  font-family: Horizon, Arial, Helvetica, Verdana;
   color: #ffffff;
-  background: #060630;
+  background: no-repeat center/75% url('../assets/background/europe.svg');
+  background-color: #060630;
   padding: 1rem;
 }

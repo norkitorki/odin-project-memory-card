@@ -1,8 +1,9 @@
 .card {
+  font-family: Horizon, var(--secondary-font);
   font-size: min(1.2rem, 3vw, 2vh);
   font-weight: bold;
   color: inherit;
-  background: none;
+  background: var(--bg-transparent);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

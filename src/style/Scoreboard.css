@@ -1,11 +1,17 @@
 .gameScore {
   width: max-content;
   font-size: min(5vw, 1.2rem);
+  background: var(--bg-transparent);
+  border-radius: 0 0 4px 4px;
   text-align: left;
   margin: 0 auto;
 }
 
 .gameScore th {
   font-weight: bold;
-  padding: 0 1rem 0.3rem 0;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+.gameScore td {
+  padding-right: 0.5rem;
 }

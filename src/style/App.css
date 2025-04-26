@@ -1,3 +1,7 @@
+header {
+  background: var(--bg-transparent);
+}
+
 header > * {
   display: inline-block;
   margin: 0 1.5rem 1.5rem 0;
@@ -8,7 +12,8 @@ header > h1 {
 }
 
 header > p {
-  font-size: min(5vw, 1.3rem);
+  font-family: var(--secondary-font);
+  font-size: min(3vw, 1.2rem);
 }
 
 header b {
@@ -17,7 +22,8 @@ header b {
 }
 
 footer {
-  font-size: 0.8rem;
+  font-family: var(--secondary-font);
+  font-size: min(3vw, 3vh, 0.8rem);
   text-align: center;
 }
 
