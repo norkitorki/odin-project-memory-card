@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Card from '../components/Card';
 
@@ -20,11 +20,11 @@ describe('Card', () => {
   it('renders card image', () => {
     render(<Card image={image} text="Alps" />);
 
-    const img = screen.getByRole('img', { name: /idyllic mountain range/i });
-    expect(img.parentElement).toBe(
-      screen.getByRole('button', { name: /alps/i })
-    );
-    expect(img).toBeInTheDocument();
+    const card = screen.getByRole('button', { name: /alps/i });
+    const img = within(card).getByRole('img', {
+      name: /idyllic mountain range/i,
+    });
+
     expect(img.src).toEqual(image.src);
   });
 
